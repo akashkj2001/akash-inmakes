@@ -1,0 +1,22 @@
+Feature: To validate the login functionality of gmail application
+
+Scenario: To validate logine with valide username and password
+Given To launch the browser and maximize window
+When To launch the url of the gmail application
+And To pass valide user name in email field
+And to cilc the request otp boutton
+Then To close the entire browser
+
+Scenario Outline: To validate the  positive and negative combinattion of login founctionality
+Given  User has to launch the browser and maximize the window
+When User has to hit the gamil url
+And User has to pass the data <emaildatas> in email field
+And User has to pass the data <passworddatas> in password field
+Then Close the entier browser
+
+Examples:
+|emaildatas|passworddatas|
+|akashkj@gmail.com|jenuak|
+|12345@gmail.com|linges670|
+|akashkja000@gmail.com|linges670|
+|jenuaksh1441@gmail.com|inmakes|

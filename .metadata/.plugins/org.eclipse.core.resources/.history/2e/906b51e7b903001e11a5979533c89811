@@ -1,0 +1,4 @@
+Feature: To validate the sign fuctionality of amezone application
+Background: To launch the chrome browser
+
+Scenario: 

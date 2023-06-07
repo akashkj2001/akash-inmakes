@@ -1,0 +1,76 @@
+package org.stepdefinition;
+
+import org.base.BaseAkash;
+import org.pojo.gmailpojo;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class emaillogin extends BaseAkash{
+	gmailpojo g;
+	@When("To launch the url of the gmail application")
+	public void to_launch_the_url_of_the_gmail_application() {
+	    launchurl("https://accounts.google.com/InteractiveLogin/identifier?elo=1&ffgf=1&ifkv=Af_xneHTFjt_KG4gmZxsGDfj5-0wiqiBruvcW5ON326PtxYZ6bUPRiKId1q1ubhkXTlrfcW1M9y2&flowName=GlifWebSignIn&flowEntry=ServiceLogin");
+	}
+
+	@Given("User has to launch the browser and maximize the window")
+	public void user_has_to_launch_the_browser_and_maximize_the_window() {
+	    launchbrowser();
+	    winmaximize();
+	}
+
+	@When("User has to hit the gamil url")
+	public void user_has_to_hit_the_gamil_url() {
+	    launchurl("https://accounts.google.com/InteractiveLogin/identifier?elo=1&ffgf=1&ifkv=Af_xneHTFjt_KG4gmZxsGDfj5-0wiqiBruvcW5ON326PtxYZ6bUPRiKId1q1ubhkXTlrfcW1M9y2&flowName=GlifWebSignIn&flowEntry=ServiceLogin");
+	}
+
+	@When("User has to pass the data akashkj@gmail.com in email field")
+	public void user_has_to_pass_the_data_akashkj_gmail_com_in_email_field(String em) {
+	    g = new gmailpojo();
+	    passtext(em,g.getgmemailfield() );
+	}
+
+	@When("User has to pass the data jenuak in password field")
+	public void user_has_to_pass_the_data_jenuak_in_password_field(String pass) {
+	    g = new gmailpojo();
+	    passtext(pass, g.getgmpasswardfield());
+	}
+
+	@Then("Close the entier browser")
+	public void close_the_entier_browser() {
+	    clossentirebrowser();
+	}
+
+	@When("User has to pass the data {int}@gmail.com in email field")
+	public void user_has_to_pass_the_data_gmail_com_in_email_field(String int1) {
+	    g = new gmailpojo();
+	    passtext(int1, g.getgmemailfield());
+	}
+
+	@When("User has to pass the data linges{int} in password field")
+	public void user_has_to_pass_the_data_linges_in_password_field(String int1) {
+		g = new gmailpojo();
+		passtext(int1, g.getgmpasswardfield());
+	}
+
+	@When("User has to pass the data akashkja{int}@gmail.com in email field")
+	public void user_has_to_pass_the_data_akashkja_gmail_com_in_email_field(String int1) {
+		g = new gmailpojo();
+		passtext(int1, g.getgmemailfield());
+	}
+
+	@When("User has to pass the data jenuaksh{int}@gmail.com in email field")
+	public void user_has_to_pass_the_data_jenuaksh_gmail_com_in_email_field(String int1) {
+		g = new gmailpojo();
+		passtext(int1, g.getgmemailfield());
+	}
+
+	@When("User has to pass the data inmakes in password field")
+	public void user_has_to_pass_the_data_inmakes_in_password_field(String pass) {
+		g = new gmailpojo();
+		passtext(pass, g.getgmpasswardfield());
+	}
+
+
+}
